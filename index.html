@@ -3,7 +3,27 @@
 
 <head>
     <meta charset="UTF-8">
+    <link rel="apple-touch-icon" sizes="57x57" href="img/favicon/">
+    <link rel="apple-touch-icon" sizes="60x60" href="img/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="img/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="img/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="img/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="img/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="imageimg/favicon/png" sizes="192x192" href="img/favicon/android-icon-192x192.png">
+    <link rel="icon" type="imageimg/favicon/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+    <link rel="icon" type="imageimg/favicon/png" sizes="96x96" href="img/favicon/favicon-96x96.png">
+    <link rel="icon" type="imageimg/favicon/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="img/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.6.2/animate.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/aos.css">
     <link rel="stylesheet" href="css/slick.css">
     <link rel="stylesheet" href="css/slick-theme.css">
@@ -28,9 +48,21 @@
                         </div>
                         <div class="lang">
                             <img class="russia" src="img/russia.png" alt="russia">
-                            <h3 class="lang-ru">Русский</h3>
-                            <img class="figure" src="img/figure.png" alt="figure">
-                            <hr>
+                            <h3 class="lang-ru">
+                                <div class="dropdown">
+                                    <a class="btn btn-secondary dropdown-toggle drop" href="#" role="button"
+                                        id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                                        Русский
+                                    </a>
+                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                        <li><a class="dropdown-item" href="index.html"><img class="russia"
+                                                    src="img/russia.png" alt="russia">Русский</a></li>
+                                        <li><a class="dropdown-item" href="index.html"><img class="russia"
+                                                    src="img/russia.png" alt="russia">Русский</a></li>
+                                    </ul>
+                                </div>
+                            </h3>
+                            <hr class="hr">
                             <img class="calendar" src="img/calendar.svg" alt="calendar">
                             <h3 class="day">
                                 <script>
@@ -59,7 +91,7 @@
         </header> <!-- =======End Header ======= -->
 
         <!-- ======= Nav ======= -->
-        <nav class="nav">
+        <nav class="nav fixed" id="nav">
             <div class="container">
                 <div class="nav__item">
                     <div class="logo">
@@ -69,35 +101,82 @@
                     </div>
                     <div class="nav__lin" id="nav__lin">
                         <a class="nav__link active" href="index.html">о нас</a>
-                        <a class="nav__link" href="banner.html">поставщики</a>
-                        <a class="nav__link" href="news-1.html">партнеры</a>
+                        <a class="nav__link" href="#section">поставщики</a>
+                        <a class="nav__link" href="#partner">партнеры</a>
                         <a class="nav__link" href="price.html">прайс</a>
                         <a class="nav__link" href="news.html">новости</a>
                         <a class="nav__link" href="jobs.html">вакнсии</a>
                         <a class="nav__link" href="contact.html">контакты</a>
                     </div>
+
+                    <!-- ======= Burger Menu ======= -->
+                    <button class="nav-toggle" id="nav_toggle" type="button">
+                        <span class="nav-toggle__item">Menu</span>
+                    </button>
+                    <!-- ======= End Burger Menu ======= -->
+
                 </div>
             </div>
         </nav>
         <!-- ======= End Nav ======= -->
 
-        <!-- ======= Burger Menu ======= -->
-        <button class="nav-toggle" id="nav_toggle" type="button">
-            <span class="nav-toggle__item">Menu</span>
-        </button>
-        <!-- ======= End Burger Menu ======= -->
 
-        <!-- ======= Intro ======= -->
-        <div class="intro" data-aos="zoom-in" data-aos-delay="150">
-            <div class="container">
-                <div class="intro__inner">
-                    <h1 class="intro__suptitle">Фармацевтика <br> наша жизнь</h1>
-                    <h2 class="intro__title">"PHARM LUXE INVEST" - это сплоченная команда профессионалов. </h2>
+        <header id="intro">
+            <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                <!-- Indicators -->
+                <ol class="carousel-indicators">
+                    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                </ol>
+
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner" role="listbox">
+                    <div class="item active">
+                        <div class="banner-1"></div>
+                        <div class="carousel-caption">
+                            <h2 class="animated bounceInRight" style="animation-delay: 1s">ФАРМАЦЕВТИКА НАША ЖИЗНЬ</h2>
+                            <h3 class="animated bounceInLeft" style="animation-delay: 2s">"PHARM LUXE INVEST" - ЭТО
+                                СПЛОЧЕННАЯ КОМАНДА ПРОФЕССИОНАЛОВ</h3>
+                            <p class="animated bounceInRight" style="animation-delay: 3s"><a
+                                    href="contact.html">КОНТАКТЫ</a></p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="banner-2"></div>
+                        <div class="carousel-caption">
+                            <h2 class="animated slideInDown" style="animation-delay: 1s">ФАРМАЦЕВТИКА НАША ЖИЗНЬ</h2>
+                            <h3 class="animated fadeInUp" style="animation-delay: 2s">"PHARM LUXE INVEST" - ЭТО
+                                СПЛОЧЕННАЯ КОМАНДА ПРОФЕССИОНАЛОВ</h3>
+                            <p class="animated zoomIn" style="animation-delay: 3s"><a href="contact.html"> КОНТАКТЫ</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="banner-3"></div>
+                        <div class="carousel-caption">
+                            <h2 class="animated zoomIn" style="animation-delay: 1s">ФАРМАЦЕВТИКА НАША ЖИЗНЬ</h2>
+                            <h3 class="animated fadeInLeft" style="animation-delay: 2s">"PHARM LUXE INVEST" - ЭТО
+                                СПЛОЧЕННАЯ КОМАНДА ПРОФЕССИОНАЛОВ</h3>
+                            <p class="animated zoomIn" style="animation-delay: 3s"><a href="contact.html"> КОНТАКТЫ</a>
+                            </p>
+                        </div>
+                    </div>
+
                 </div>
+
+                <!-- Controls -->
+                <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
             </div>
 
-        </div>
-        <!-- ======= End Intro ======= -->
+        </header>
 
         <div class="fon-1">
             <img src="img/bg/fon-1.png" alt="">
@@ -239,8 +318,8 @@
         <!-- ======= End Company ======= -->
 
         <!-- ======= Exclusive ======= -->
-        <div class="section" data-aos="zoom-in" data-aos-delay="250">
-            <div class="exclusive">
+        <div id="section" class="section">
+            <div class="exclusive" data-aos="zoom-in" data-aos-delay="250">
                 <div class="exclusive__bg">
                     <div class="exclusive__paralax">
                         <div class="container">
@@ -271,42 +350,48 @@
                     </div>
                     <div class="news__content">
                         <div class="news-1" data-aos="fade-right" data-aos-delay="250">
-                            <a href="img/news/news-1.png" class="hover" target="_blank">
+                            <a href="news-1.html" class="hover" target="_blank">
                                 <img src="img/news/news-1.png" alt="">
                             </a>
-                            <h3>Индийская компания запустит
-                                фармпроизводство в Андижане</h3>
-                            <p>Индийская Cadila Pharmaceuticals
-                                создаст на территории свободной
-                                экономической зоны «Андижан-фарм»
-                                предприятие по производству
-                                фармацевтической продукции. </p>
+                            <a href="news-1.html">
+                                <h3>Индийская компания запустит
+                                    фармпроизводство в Андижане</h3>
+                                <p>Индийская Cadila Pharmaceuticals
+                                    создаст на территории свободной
+                                    экономической зоны «Андижан-фарм»
+                                    предприятие по производству
+                                    фармацевтической продукции. </p>
+                            </a>
                         </div>
                         <div class="news-1" data-aos="fade-up" data-aos-delay="250">
-                            <a href="img/news/news-2.png" class="hover" target="_blank">
+                            <a href="news-2.html" class="hover" target="_blank">
                                 <img class="img" src="img/news/news-2.png" alt="">
                             </a>
-                            <h3>Частная медицина получила
-                                стимул для развития</h3>
-                            <p>Президент Шавкат Мирзиёев подписал
-                                постановление «О мерах по
-                                дальнейшему развитию частного
-                                сектора в здравоохранении», сообщила
-                                программа «Ахборот» телеканала
-                                «Узбекистан». </p>
+                            <a href="news-2.html">
+                                <h3>Частная медицина получила
+                                    стимул для развития</h3>
+                                <p>Президент Шавкат Мирзиёев подписал
+                                    постановление «О мерах по
+                                    дальнейшему развитию частного
+                                    сектора в здравоохранении», сообщила
+                                    программа «Ахборот» телеканала
+                                    «Узбекистан». </p>
+                            </a>
                         </div>
                         <div class="news-1" data-aos="fade-left" data-aos-delay="250">
-                            <a href="img/news/news-3.png" class="hover" target="_blank">
+                            <a href="news-3.html" class="hover" target="_blank">
                                 <img src="img/news/news-3.png" alt="">
                             </a>
-                            <h3>Программу повышения качества
-                                лекарств реализуют
-                                в Узбекистане</h3>
-                            <p>В Узбекистане реализуют программу
-                                «Продвижение качества лекарственных
-                                средств плюс». Документ об этом
-                                подписали Фармагентство при
-                                Минздраве и USAID. </p>
+                            <a href="news-3.html">
+                                <h3>Программу повышения качества
+                                    лекарств реализуют
+                                    в Узбекистане</h3>
+                                <p>В Узбекистане реализуют программу
+                                    «Продвижение качества лекарственных
+                                    средств плюс». Документ об этом
+                                    подписали Фармагентство при
+                                    Минздраве и USAID. </p>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -315,7 +400,7 @@
         <!-- ======= End News ======= -->
 
         <!-- ======= Price ======= -->
-        <div class="price" data-aos="fade-up" data-aos-delay="250">
+        <div class="price" data-aos="zoom-in" data-aos-delay="250">
             <div class="price__paralax">
                 <div class="container">
                     <div class="paralax__title">
@@ -334,13 +419,13 @@
         <!-- ======= End Price ======= -->
 
         <!-- ======= Partner ======= -->
-        <div class="partner" data-aos="fade-up" data-aos-delay="250">
-            <div class="container">
+        <div id="partner" class="partner">
+            <div class="container" data-aos="fade-up" data-aos-delay="250">
                 <div class="partner__title">
                     <h3>Наши <span>партнёры</span>
                     </h3>
                 </div>
-                <div id="links" class="slick-slider">
+                <div class="slick-slider">
                     <div class="slider__item">
                         <img src="img/partner/partner-1.png" alt="">
                     </div>
@@ -412,22 +497,19 @@
                 <div class="contact__title">
                     <h3>контакты</h3>
                 </div>
-                <div class="contact__link" id="contact__link">
-                    <button class="link-1" id="link-1">Самарканд</button>
-                    <button class="link-2">Ташкент</button>
-                    <button class="link-3">Ургенч</button>
-                    <button class="link-4">Термез</button>
-                    <button class="link-5">Фергана</button>
+                <div class="contact__link">
+                    <button class="link-1 tab__link" data-tab="#tab__1">Самарканд</button>
+                    <button class="link-2 tab__link" data-tab="#tab__2">Ташкент</button>
+                    <button class="link-3 tab__link" data-tab="#tab__3">Ургенч</button>
+                    <button class="link-4 tab__link" data-tab="#tab__4">Термез</button>
+                    <button class="link-5 tab__link" data-tab="#tab__5">Фергана</button>
                 </div>
                 <div class="city">
-                    <img class="city-img" src="img/UZB.png" alt="">
-                    <div class="location">
-                        <img class="loc-1 active" src="img/location.png" alt="">
-                        <img class="loc-2 active" src="img/location.png" alt="">
-                        <img class="loc-3" src="img/location.png" alt="">
-                        <img class="loc-4" src="img/location.png" alt="">
-                        <img class="loc-5" src="img/location.png" alt="">
-                    </div>
+                    <img class="city-img" id="tab__1" src="img/samarqand.png" alt="">
+                    <img class="city-img" id="tab__2" src="img/toshkent.png" alt="">
+                    <img class="city-img" id="tab__3" src="img/urganch.png" alt="">
+                    <img class="city-img" id="tab__4" src="img/termiz.png" alt="">
+                    <img class="city-img" id="tab__5" src="img/fargona.png" alt="">
                 </div>
                 <div class="line"></div>
                 <div class="contact__info">
@@ -459,17 +541,16 @@
             </div>
         </div>
         <!-- ======= End Contact ======= -->
+    </div>
 
-        <!-- ======= Preloader ======= -->
-
-        <!-- ======= End Preloader ======= -->
-
-        <script src="js/jquery.js"></script>
-        <script src="js/main.js"></script>
-        <script src="js/slick.min.js"></script>
-        <script src="js/aos.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/3.0.0-beta.6/aos.js"></script>
-        <script class="u-script" src="js/nicepage.js" defer=""></script>
+    <script src="js/jquery.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/3.0.0-beta.6/aos.js"></script>
+    <script class="u-script" src="js/nicepage.js" defer=""></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </body>
 
 </html>
