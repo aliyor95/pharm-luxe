@@ -15,8 +15,8 @@ $('.number').each(function () {
 $(function() {
     $('.slick-slider').slick({
         infinite: true,
-        slidesToShow: 5,
-        slidesToScroll: 4,
+        slidesToShow: 3,
+        slidesToScroll: 3,
         autoplay: true,
         autoplaySpeed: 2000,
         arrows: false,
@@ -47,3 +47,52 @@ $(function() {
 
 })(jQuery);
 
+$(function() {
+    var header = $('#nav'),
+        introH = $('#intro, #news-partner__title').innerHeight(),
+        scrollOffset = $(window).scrollTop();
+
+        // ! Fixed header
+        checkScroll(scrollOffset);
+    $(window).on('scroll', function() {
+        scrollOffset = $(this).scrollTop();
+        checkScroll(scrollOffset);
+    });
+
+    function checkScroll(scrollOffset) {
+        if(scrollOffset >= introH) {
+            header.addClass('fixed');
+        }   else(
+            header.removeClass('fixed')
+        );
+    }
+});
+
+// Contact Tabs
+const tabsBtn   = document.querySelectorAll(".tab__link");
+const tabsItems = document.querySelectorAll(".tab__item, .city-img");
+
+tabsBtn.forEach(onTabClick);
+
+function onTabClick(item) {
+    item.addEventListener("click", function() {
+        let currentBtn = item;
+        let tabId = currentBtn.getAttribute("data-tab");
+        let currentTab = document.querySelector(tabId);
+
+        if( ! currentBtn.classList.contains('active') ) {
+            tabsBtn.forEach(function(item) {
+                item.classList.remove('active');
+            });
+    
+            tabsItems.forEach(function(item) {
+                item.classList.remove('active');
+            });
+    
+            currentBtn.classList.add('active');
+            currentTab.classList.add('active');
+        }
+    });
+}
+
+document.querySelector('.tab__link').click();
