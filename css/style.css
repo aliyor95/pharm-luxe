@@ -209,6 +209,22 @@ p {
     cursor: pointer;
 }
 
+.lang-ru {
+    position: relative;
+}
+
+/* .lang-ru::before {
+    content: "";
+    display: block;
+    width: 3px;
+    height: 21px;
+    background: #fff;
+    position: absolute;
+    right: -13%;
+    bottom: 6px;
+    margin: 0 17px 0 8px;
+} */
+
 .russia {
     width: 20px;
     height: 14px;
@@ -252,7 +268,9 @@ hr {
     width: 3px;
     height: 21px;
     background: #fff;
+    color: #ffffff;
     margin: 0 17px 0 8px;
+    opacity: 1;
 }
 
 .calendar {
@@ -374,6 +392,7 @@ hr {
 	background-position: center center;
 	background-repeat: no-repeat;
     height: 100vh;
+    
 }
 
 .banner-2 {
@@ -383,6 +402,7 @@ hr {
 	background-position: center center;
 	background-repeat: no-repeat;
     height: 100vh;
+    
 }
 
 .banner-3 {
@@ -392,14 +412,25 @@ hr {
 	background-position: center center;
 	background-repeat: no-repeat;
     height: 100vh;
+    
 }
 
 .carousel-caption {
-	padding-bottom: 250px;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    right: 0;
+    left: 0;
+    top: calc(50% - 336px);
 }
 
 .carousel-caption h2 {
-	font-size: 90px;
+	font-size: 84px;
 	text-transform: uppercase;
     font-weight: 900;
     padding-bottom: 30px;
@@ -1336,6 +1367,10 @@ hr {
     padding-top: 4px;
 }
 
+.job__mail {
+    display: flex;
+}
+
 .job__mail a {
     color: #222221;
     font-family: 'Montserrat', sans-serif;
@@ -1343,6 +1378,30 @@ hr {
     font-weight: 500;
     text-decoration: none;
     margin-left: 15px;
+}
+
+.job__mail p {
+    text-decoration: none;
+    color: #222221;
+    font-weight: 500;
+    line-height: 30px;
+    margin-left: 15px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+}
+
+.e-mail {
+    text-decoration: none;
+    color: #222221;
+    font-weight: 700;
+    line-height: 30px;
+    margin-left: 0px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+}
+
+.job__mail span {
+    margin-left: 0;
 }
 
 .contact__link button {
@@ -1929,6 +1988,14 @@ hr {
 
     .nav.fixed .logo img {
         width: 90%;
+    }
+
+    .nav.fixed .active {
+        top: 100%;
+    }
+
+    .nav.fixed .nav-toggle.active .nav-toggle__item {
+        background: none;
     }
 
     .nav.fixed .nav-toggle {
@@ -2572,6 +2639,7 @@ hr {
         left: 0;
         top: 0;
         position: static;
+        padding-top: 0;
     }
 
     .contact__1 {
@@ -2595,8 +2663,13 @@ hr {
         font-size: 11px;
     }
 
-    .contact__page-1 {
-        margin-top: 50px;
+    .contact__page h3 {
+        padding: 0;
+    }
+
+    .contact__1 {
+        padding-top: 0;
+        margin-top: 0;
     }
     .contact__page-2 {
         margin-top: 50px;
@@ -2792,6 +2865,10 @@ hr {
 
     .job__mail a {
         margin-left: 0;
+    }
+
+    .job__mail p {
+        font-size: 20px;
     }
 }
 
@@ -2989,6 +3066,10 @@ hr {
         margin-top: 82px;
         padding-right: 0;
     }
+
+    .job__mail p {
+        font-size: 18px;
+    }
 }
 
 @media (max-width: 409px) {
@@ -3052,32 +3133,19 @@ hr {
     }
 }
 
-@media (max-width: 1280px) {
-    .carousel-caption {
-		padding-bottom: 650px;
-	}
-}
-
-@media (max-width: 1024px) {
-    .carousel-caption {
-		padding-bottom: 450px;
-	}
-}
-
 @media only screen and (min-width: 768px) and (max-width: 991px) {
-	.carousel-caption {
-		padding-bottom: 350px;
-	}
 	.carousel-caption h2 {
 		font-size: 48px;
+    }
+    .carousel-caption h3 {
+		font-size: 20px;
 	}
 }
+
 @media only screen and (max-width: 767px) {
-	.carousel-caption {
-		padding-bottom: 120px;
-	}
+	
 	.carousel-caption h2 {
-		font-size: 25px;
+		font-size: 50px;
 	}
 	.carousel-caption h3 {
 		font-size: 18px;
@@ -3088,27 +3156,21 @@ hr {
 }
 
 @media (max-width: 576px) {
-    .carousel-caption {
-		padding-bottom: 200px;
+    .carousel-caption h2 {
+		font-size: 35px;
+    }
+    .carousel-caption h3 {
+		font-size: 14px;
 	}
 }
 
-@media (max-width: 414px) {
-    .carousel-caption {
-		padding-bottom: 170px;
-	}
-}
-
-@media (max-width: 376px) {
-    .carousel-caption {
-		padding-bottom: 150px;
+@media (max-width: 576px) {
+    .carousel-caption h2 {
+		font-size: 30px;
 	}
 }
 
 @media (max-width: 321px) {
-    .carousel-caption {
-		padding-bottom: 110px;
-	}
 
     .carousel-caption h2 {
         font-size: 24px;
@@ -3119,3 +3181,10 @@ hr {
         font-size: 18px;
     }
 }
+
+.mail-e {
+    position: static;
+    margin-left: 0;
+}
+
+
