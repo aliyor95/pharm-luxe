@@ -2246,6 +2246,10 @@ hr {
         height: 390px;
     }
 
+    .price__content {
+        padding-bottom: 50px;
+    }
+
     .paralax__title {
         width: auto;
     }
@@ -2609,6 +2613,10 @@ hr {
 
     .price__paralax {
         height: auto;
+    }
+
+    .price__content {
+        padding-bottom: 0;
     }
 
     .but-1 {
