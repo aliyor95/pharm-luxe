@@ -2671,9 +2671,11 @@ hr {
         font-size: 11px;
     }
 
-    .contact__page h3 {
+
+    .cont-h3 {
         padding: 0;
     }
+    
 
     .contact__1 {
         padding-top: 0;
@@ -2690,11 +2692,25 @@ hr {
     .job__mail img {
         padding-left: 0;
     }
+
+    .con-h3 {
+        padding: 0;
+    }
 }
 
 @media (max-width: 576px) {
     .job__right {
         height: auto;
+    }
+
+    .contact__1 h3 {
+        padding-top: 0;
+    }
+    .contact__2 h3 {
+        padding-top: 0;
+    }
+    .contact__3 h3 {
+        padding-top: 0;
     }
 }
 
@@ -2834,6 +2850,14 @@ hr {
         height: auto;
         z-index: 9;
         margin-top: -29px;
+    }
+
+    .con-h3 {
+        padding-top: 0;
+    }
+
+    .contact__1 h3 {
+        padding-top: 0;
     }
 }
 
@@ -3133,6 +3157,10 @@ hr {
     .job__mail a {
         font-size: 22px;
     }
+
+    .contact__1 h3 {
+        padding-top: 20px;
+    }
 }
 
 @media (max-width: 336px) {
@@ -3183,6 +3211,10 @@ hr {
     .carousel-caption h2 {
         font-size: 24px;
         padding-bottom: 20px;
+    }
+
+    .contact__1 h3 {
+        padding-top: 20px;
     }
 
     .carousel-caption h3 {
