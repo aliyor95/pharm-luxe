@@ -49,7 +49,7 @@ $(function() {
 
 $(function() {
     var header = $('#nav'),
-        introH = $('#intro, #news-partner__title').innerHeight(),
+        introH = $('#intro, #news-partner__title, #new-h3').innerHeight(),
         scrollOffset = $(window).scrollTop();
 
         // ! Fixed header
