@@ -868,6 +868,14 @@ hr {
     flex-wrap: wrap;
 }
 
+.news-page-h3 {
+    text-align: center;
+    color: #222221;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 49px;
+    font-weight: 700;
+}
+
 .news-1 {
     width: 321px;
     background: #fff;
@@ -2304,7 +2312,7 @@ hr {
 
     .contact__logo {
         left: 35%;
-        top: -10%;
+        bottom: 35%;
         position: absolute;
     }
 
@@ -2374,6 +2382,10 @@ hr {
 
     .lang h3 {
         padding-right: 40px;
+    }
+
+    .dropdown-item img {
+        display: block;
     }
 
     .figure {
@@ -2675,7 +2687,6 @@ hr {
     .cont-h3 {
         padding: 0;
     }
-    
 
     .contact__1 {
         padding-top: 0;
@@ -2690,11 +2701,15 @@ hr {
     }
 
     .job__mail img {
-        padding-left: 0;
+        padding-left: 25px;
     }
 
     .con-h3 {
         padding: 0;
+    }
+
+    .news__page-content {
+        padding-left: 0;
     }
 }
 
@@ -2783,6 +2798,14 @@ hr {
 
     .russia {
         display: none;
+    }
+
+    .dropdown-item img {
+        display: block;
+    }
+
+    .dropdown-menu>li>a {
+        display: flex;
     }
 
     .intro__suptitle {
@@ -3100,7 +3123,7 @@ hr {
     }
 
     .job__mail p {
-        font-size: 18px;
+        font-size: 20px;
     }
 }
 
